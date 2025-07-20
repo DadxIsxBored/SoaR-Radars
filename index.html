@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SoaR Radar Graphs</title>
+    <title>SoaR Radar Graph</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,42 +12,6 @@
         }
         h1 {
             margin-top: 30px;
-        }
-        .compare-panel {
-            border: 2px solid #444;
-            background: #fff;
-            padding: 10px;
-            margin: 20px auto;
-            width: 80%;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            min-height: 150px;
-        }
-        .compare-panel img {
-            max-width: 200px;
-            border: 2px solid #333;
-            padding: 5px;
-            background: #fff;
-            box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
-        }
-        .compare-panel div {
-            position: relative;
-            display: inline-block;
-        }
-        .remove-btn {
-            position: absolute;
-            top: -10px;
-            right: -10px;
-            background: red;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            cursor: pointer;
-            font-size: 12px;
         }
         .gallery {
             display: flex;
@@ -61,7 +25,6 @@
             border: 2px solid #333;
             padding: 10px;
             box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
-            width: 200px;
         }
         .team-block h3 {
             margin: 5px 0 10px 0;
@@ -71,22 +34,11 @@
             display: inline-block;
         }
         .team-block img {
-            max-width: 80px;
+            max-width: 120px;
             transition: transform 0.2s;
         }
         .team-block img:hover {
             transform: scale(1.05);
-        }
-        .compare-btn {
-            margin-top: 10px;
-            background: #007bff;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-        }
-        .compare-btn:hover {
-            background: #0056b3;
         }
     </style>
 </head>
@@ -193,86 +145,6 @@
             <a href="TWKA_triangle.png" target="_blank"><img src="TWKA_triangle.png" alt="TWKA Triangle"></a>
             <a href="TWKA_expanded_pentagon.png" target="_blank"><img src="TWKA_expanded_pentagon.png" alt="TWKA Pentagon"></a>
         </div>
-    </div>
-    
-<script>
-        const teams = [
-            "100T", "5S", "BB", "DZS", "FLAT", "FS", "GMBL", "LGCY", "LG",
-            "NICE", "NIP", "OBVN", "ORC", "ROC", "SEN", "SOL", "TLAW",
-            "TSM", "TWIS", "TWKA"
-        ];
-
-        const gallery = document.getElementById('gallery');
-        const comparePanel = document.getElementById('comparePanel');
-        const compareSelection = [];
-
-        function addToCompare(src, label) {
-            if (compareSelection.length >= 3) {
-                alert('You can only compare up to 3 images.');
-                return;
-            }
-            const container = document.createElement('div');
-            const img = document.createElement('img');
-            img.src = src;
-            img.alt = label;
-
-            const removeBtn = document.createElement('button');
-            removeBtn.className = 'remove-btn';
-            removeBtn.innerHTML = '×';
-            removeBtn.onclick = function () {
-                comparePanel.removeChild(container);
-                const index = compareSelection.indexOf(src);
-                if (index > -1) compareSelection.splice(index, 1);
-                if (compareSelection.length === 0) {
-                    comparePanel.innerHTML = '<p>Select up to 3 images to compare.</p>';
-                }
-            };
-
-            container.appendChild(img);
-            container.appendChild(removeBtn);
-            comparePanel.appendChild(container);
-            compareSelection.push(src);
-
-            // Remove instruction text if it exists
-            const p = comparePanel.querySelector('p');
-            if (p) comparePanel.removeChild(p);
-        }
-
-        teams.forEach(team => {
-            const block = document.createElement('div');
-            block.className = 'team-block';
-
-            const title = document.createElement('h3');
-            title.innerText = team;
-            block.appendChild(title);
-
-            const triLink = document.createElement('a');
-            triLink.href = `${team}_triangle.png`;
-            triLink.target = '_blank';
-            const triImg = document.createElement('img');
-            triImg.src = `${team}_triangle.png`;
-            triImg.alt = `${team} Triangle`;
-            triLink.appendChild(triImg);
-            block.appendChild(triLink);
-
-            const pentLink = document.createElement('a');
-            pentLink.href = `${team}_expanded_pentagon.png`;
-            pentLink.target = '_blank';
-            const pentImg = document.createElement('img');
-            pentImg.src = `${team}_expanded_pentagon.png`;
-            pentImg.alt = `${team} Pentagon`;
-            pentLink.appendChild(pentImg);
-            block.appendChild(pentLink);
-
-            const compareBtn = document.createElement('button');
-            compareBtn.className = 'compare-btn';
-            compareBtn.innerText = 'Compare Pentagon';
-            compareBtn.onclick = () => addToCompare(`${team}_expanded_pentagon.png`, team);
-            block.appendChild(compareBtn);
-
-            gallery.appendChild(block);
-        });
-    </script>
-    
+    </div>    
 </body>
 </html>
