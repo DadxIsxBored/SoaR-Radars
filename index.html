@@ -19,13 +19,21 @@
             justify-content: center;
             margin: 20px;
         }
+        .gallery a {
+            margin: 10px;
+            text-decoration: none;
+            color: black;
+        }
         .gallery img {
             max-width: 150px;
-            margin: 10px;
             border: 2px solid #333;
             background: #fff;
             padding: 5px;
             box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
         }
         .caption {
             margin-top: 5px;
@@ -36,27 +44,87 @@
 <body>
     <h1>Triangle Logos Gallery</h1>
     <div class="gallery">
-        <!-- Image List -->
-        <div><img src="100T_triangle.png" alt="100T"><div class="caption">100T</div></div>
-        <div><img src="5S_triangle.png" alt="5S"><div class="caption">5S</div></div>
-        <div><img src="BB_triangle.png" alt="BB"><div class="caption">BB</div></div>
-        <div><img src="DZS_triangle.png" alt="DZS"><div class="caption">DZS</div></div>
-        <div><img src="FLAT_triangle.png" alt="FLAT"><div class="caption">FLAT</div></div>
-        <div><img src="FS_triangle.png" alt="FS"><div class="caption">FS</div></div>
-        <div><img src="GMBL_triangle.png" alt="GMBL"><div class="caption">GMBL</div></div>
-        <div><img src="LGCY_triangle.png" alt="LGCY"><div class="caption">LGCY</div></div>
-        <div><img src="LG_triangle.png" alt="LG"><div class="caption">LG</div></div>
-        <div><img src="NICE_triangle.png" alt="NICE"><div class="caption">NICE</div></div>
-        <div><img src="NIP_triangle.png" alt="NIP"><div class="caption">NIP</div></div>
-        <div><img src="OBVN_triangle.png" alt="OBVN"><div class="caption">OBVN</div></div>
-        <div><img src="ORC_triangle.png" alt="ORC"><div class="caption">ORC</div></div>
-        <div><img src="ROC_triangle.png" alt="ROC"><div class="caption">ROC</div></div>
-        <div><img src="SEN_triangle.png" alt="SEN"><div class="caption">SEN</div></div>
-        <div><img src="SOL_triangle.png" alt="SOL"><div class="caption">SOL</div></div>
-        <div><img src="TLAW_triangle.png" alt="TLAW"><div class="caption">TLAW</div></div>
-        <div><img src="TSM_triangle.png" alt="TSM"><div class="caption">TSM</div></div>
-        <div><img src="TWIS_triangle.png" alt="TWIS"><div class="caption">TWIS</div></div>
-        <div><img src="TWKA_triangle.png" alt="TWKA"><div class="caption">TWKA</div></div>
+        <!-- Clickable Image List -->
+        <a href="100T_triangle.png" target="_blank">
+            <img src="100T_triangle.png" alt="100T">
+            <div class="caption">100T</div>
+        </a>
+        <a href="5S_triangle.png" target="_blank">
+            <img src="5S_triangle.png" alt="5S">
+            <div class="caption">5S</div>
+        </a>
+        <a href="BB_triangle.png" target="_blank">
+            <img src="BB_triangle.png" alt="BB">
+            <div class="caption">BB</div>
+        </a>
+        <a href="DZS_triangle.png" target="_blank">
+            <img src="DZS_triangle.png" alt="DZS">
+            <div class="caption">DZS</div>
+        </a>
+        <a href="FLAT_triangle.png" target="_blank">
+            <img src="FLAT_triangle.png" alt="FLAT">
+            <div class="caption">FLAT</div>
+        </a>
+        <a href="FS_triangle.png" target="_blank">
+            <img src="FS_triangle.png" alt="FS">
+            <div class="caption">FS</div>
+        </a>
+        <a href="GMBL_triangle.png" target="_blank">
+            <img src="GMBL_triangle.png" alt="GMBL">
+            <div class="caption">GMBL</div>
+        </a>
+        <a href="LGCY_triangle.png" target="_blank">
+            <img src="LGCY_triangle.png" alt="LGCY">
+            <div class="caption">LGCY</div>
+        </a>
+        <a href="LG_triangle.png" target="_blank">
+            <img src="LG_triangle.png" alt="LG">
+            <div class="caption">LG</div>
+        </a>
+        <a href="NICE_triangle.png" target="_blank">
+            <img src="NICE_triangle.png" alt="NICE">
+            <div class="caption">NICE</div>
+        </a>
+        <a href="NIP_triangle.png" target="_blank">
+            <img src="NIP_triangle.png" alt="NIP">
+            <div class="caption">NIP</div>
+        </a>
+        <a href="OBVN_triangle.png" target="_blank">
+            <img src="OBVN_triangle.png" alt="OBVN">
+            <div class="caption">OBVN</div>
+        </a>
+        <a href="ORC_triangle.png" target="_blank">
+            <img src="ORC_triangle.png" alt="ORC">
+            <div class="caption">ORC</div>
+        </a>
+        <a href="ROC_triangle.png" target="_blank">
+            <img src="ROC_triangle.png" alt="ROC">
+            <div class="caption">ROC</div>
+        </a>
+        <a href="SEN_triangle.png" target="_blank">
+            <img src="SEN_triangle.png" alt="SEN">
+            <div class="caption">SEN</div>
+        </a>
+        <a href="SOL_triangle.png" target="_blank">
+            <img src="SOL_triangle.png" alt="SOL">
+            <div class="caption">SOL</div>
+        </a>
+        <a href="TLAW_triangle.png" target="_blank">
+            <img src="TLAW_triangle.png" alt="TLAW">
+            <div class="caption">TLAW</div>
+        </a>
+        <a href="TSM_triangle.png" target="_blank">
+            <img src="TSM_triangle.png" alt="TSM">
+            <div class="caption">TSM</div>
+        </a>
+        <a href="TWIS_triangle.png" target="_blank">
+            <img src="TWIS_triangle.png" alt="TWIS">
+            <div class="caption">TWIS</div>
+        </a>
+        <a href="TWKA_triangle.png" target="_blank">
+            <img src="TWKA_triangle.png" alt="TWKA">
+            <div class="caption">TWKA</div>
+        </a>
     </div>
 </body>
 </html>
